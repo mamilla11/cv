@@ -4,7 +4,9 @@
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
-  padding-top: 242px;
+  padding-top: 287px;
+  margin-left: 23px;
+  margin-bottom: 127px;
 
   &::before {
     position: absolute;
@@ -12,25 +14,41 @@
     left: 50%;
     transform: translateX(-50%);
     content: "";
-    width: 202px;
-    height: 202px;
+    width: 242px;
+    height: 242px;
     background-color: $color-blue;
+    background-image: url("../img/avatar@1x.jpeg");
     border-radius: 50%;
+    box-shadow:
+      0 0 0 18px $color-white,
+      0 0 0 19px $color-blue;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    &::before {
+      background-image: url("../img/avatar@2x.jpeg");
+    }
   }
 }
 
 .intro__name {
-  font-size: 60px;
+  font-size: 74px;
+  line-height: 74px;
   margin: 0;
+  padding: 0;
 }
 
 .intro__surname {
-  font-size: 60px;
+  font-size: 74px;
+  line-height: 74px;
   margin: 0;
+  padding: 0;
   font-weight: bold;
 }
 
 .intro__profession {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
 }

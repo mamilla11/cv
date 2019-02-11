@@ -12,7 +12,7 @@ html
             p.intro__surname Shishova
             p.intro__profession Frontend Developer
           section.cv__section.profile
-            h2.title Profile
+            h2.title.title--profile Profile
             p
               | Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
               | Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
@@ -21,13 +21,20 @@ html
               | eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
               | pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
               | In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-              | Nullam dictum felis eu pede mollis pretium.
+              | Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+              | Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
+              | eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
+              | eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
+              | feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+              | Quisque rutrum. Aliquam lorem ante, dapibus in, viverra quis,
+              | feugiat a, tellus.
           section.cv__section.contact
-            h2.title Contact
+            h2.title.title--contact Contact
             .contact__table
+              .contact__column
               .contact__row
                 p.contact__cell.contact__type Address
-                p.contact__cell.contact__value Russia, Saint Petersburg, Engelsa avenue
+                p.contact__cell.contact__value Russia, Saint Petersburg
               .contact__row
                 p.contact__cell.contact__type E-mail
                 a.contact__cell.contact__value(href="mailto:as.shishova@gmail.com") as.shishova@gmail.com
@@ -38,7 +45,7 @@ html
                 p.contact__cell.contact__type Website
                 a.contact__cell.contact__value(href="http://ana.shishoit.io") ana.shishoit.io
           section.cv__section.skills
-            h2.title Skills
+            h2.title.title--skills Skills
             ul.skills__list
               li.skills__item
                 p.skills__name Creative
@@ -54,7 +61,7 @@ html
                 input.range.range--dotted.skills__level(type="range", min="0", max="100", value="91", disabled)
         .cv__column
           section.cv__section.education
-            h2.title Education
+            h2.title.title--education Education
             ul.list.education__list
               li.list__item
                 .list__header
@@ -101,7 +108,7 @@ html
                     | natoque penatibus et magnis dis parturient montes, nascetur
                     | ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
           section.cv__section.experience
-            h2.title Experience
+            h2.title.title--experience Experience
             ul.list.experience__list
               li.list__item
                 .list__header
@@ -137,7 +144,7 @@ html
                     | natoque penatibus et magnis dis parturient montes, nascetur
                     | ridiculus mus. Donec quam felis, ultricies nec, pellentesque.
           section.cv__section.software
-            h2.title Software
+            h2.title.title--software Software
             ul.software__list
               li.software__item
                 p.software__name Photoshop

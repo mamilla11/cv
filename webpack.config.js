@@ -82,6 +82,10 @@ const config = {
       {
         from: "./src/fonts",
         to: "./fonts"
+      },
+      {
+        from: "./src/img",
+        to: "./img"
       }
     ]),
     new HtmlWebpackPlugin({

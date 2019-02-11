@@ -11,22 +11,32 @@
   &::before {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 7px;
     transform: translateY(-50%);
     width: 54px;
     height: 52px;
     content: "";
-    border: 2px solid $color-blue;
     border-radius: 50%;
+    background-color: $color-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--profile::before {
+    background-image: url("../img/profile-icon.svg");
   }
 
   @media (min-width: $width-tablet) {
-    font-size: 41px;
-    padding: 0 10px 0 85px;
+    font-size: 49px;
+    padding: 0 10px 0 102px;
 
     &::before {
-      width: 74px;
-      height: 72px;
+      width: 79.2px;
+      height: 78px;
+      background-size: 40px 35px;
+      box-shadow:
+        0 0 0 4px $color-white,
+        0 0 0 5px $color-blue;
     }
   }
 }
