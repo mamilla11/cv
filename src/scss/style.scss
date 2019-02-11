@@ -1,5 +1,6 @@
-$bg-color: pink;
-
-body {
-  background: $bg-color;
-}
+@import "fonts.scss";
+@import "visually-hidden.scss";
+@import "vars.scss";
+@import "cv.scss";
+@import "title.scss";
+@import "intro.scss";

@@ -1,0 +1,32 @@
+.title {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: $color-blue;
+  padding: 0 10px 0 62px;
+  margin: -70px 0 15px 0;
+  background-color: $color-white;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 54px;
+    height: 52px;
+    content: "";
+    border: 2px solid $color-blue;
+    border-radius: 50%;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 41px;
+    padding: 0 10px 0 85px;
+
+    &::before {
+      width: 74px;
+      height: 72px;
+    }
+  }
+}

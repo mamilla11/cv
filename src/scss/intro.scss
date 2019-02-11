@@ -1,0 +1,36 @@
+.intro {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  padding-top: 242px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 202px;
+    height: 202px;
+    background-color: $color-blue;
+    border-radius: 50%;
+  }
+}
+
+.intro__name {
+  font-size: 60px;
+  margin: 0;
+}
+
+.intro__surname {
+  font-size: 60px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.intro__profession {
+  font-size: 25px;
+  font-weight: bold;
+}
