@@ -1,0 +1,6 @@
+.vscode
+*.log
+*.psd
+node_modules/
+dist/
+npm-debug.*
