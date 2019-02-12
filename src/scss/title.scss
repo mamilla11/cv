@@ -1,11 +1,12 @@
 .title {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   font-size: 30px;
   text-transform: uppercase;
   color: $color-blue;
   padding: 0 10px 0 62px;
-  margin: -70px 0 15px 0;
+  margin: -38px 0 12px 0;
   background-color: $color-white;
 
   &::before {
@@ -34,6 +35,10 @@
     background-image: url("../img/experience-icon.svg");
   }
 
+  &--education::before {
+    background-image: url("../img/education-icon.svg");
+  }
+
   @media (min-width: $width-tablet) {
     font-size: 49px;
     padding: 0 10px 0 102px;
@@ -58,12 +63,13 @@
       background-size: 40px 35px;
     }
 
-    &--skills::before {
+    &--skills::before,
+    &--experience::before {
       background-size: 57px 52px;
     }
 
-    &--experience::before {
-      background-size: 55px 50px;
+    &--education::before {
+      background-size: 60px 55px;
     }
   }
 }
