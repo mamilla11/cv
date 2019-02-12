@@ -26,6 +26,10 @@
     background-image: url("../img/profile-icon.svg");
   }
 
+  &--skills::before {
+    background-image: url("../img/skills-icon.svg");
+  }
+
   @media (min-width: $width-tablet) {
     font-size: 49px;
     padding: 0 10px 0 102px;
@@ -33,10 +37,18 @@
     &::before {
       width: 79.2px;
       height: 78px;
-      background-size: 40px 35px;
+
       box-shadow:
         0 0 0 4px $color-white,
         0 0 0 5px $color-blue;
+    }
+
+    &--profile::before {
+      background-size: 40px 35px;
+    }
+
+    &--skills::before {
+      background-size: 57px 52px;
     }
   }
 }

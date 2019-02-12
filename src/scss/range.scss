@@ -1,0 +1,30 @@
+.range__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &--two-columns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.range__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--column {
+    width: 45%;
+  }
+
+  &--align-left {
+    align-items: flex-start;
+  }
+}
+
+.range__name {
+  font-size: 31px;
+  text-transform: uppercase;
+  margin: 25px 0 4px 0;
+}
