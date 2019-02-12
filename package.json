@@ -23,6 +23,7 @@
   "homepage": "https://github.com/mamilla11/cv#readme",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^9.4.7",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
