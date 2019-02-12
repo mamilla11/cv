@@ -30,9 +30,20 @@
     background-image: url("../img/skills-icon.svg");
   }
 
+  &--experience::before {
+    background-image: url("../img/experience-icon.svg");
+  }
+
   @media (min-width: $width-tablet) {
     font-size: 49px;
     padding: 0 10px 0 102px;
+
+    &--education,
+    &--experience,
+    &--software {
+      padding-left: 112px;
+      padding-right: 5px;
+    }
 
     &::before {
       width: 79.2px;
@@ -49,6 +60,10 @@
 
     &--skills::before {
       background-size: 57px 52px;
+    }
+
+    &--experience::before {
+      background-size: 55px 50px;
     }
   }
 }
