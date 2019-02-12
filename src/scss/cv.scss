@@ -25,6 +25,7 @@
 
 .cv__column {
   flex-shrink: 0;
+
   @media (min-width: $width-desktop) {
     &:first-child {
       width: 37%;
