@@ -9,9 +9,9 @@
         <div class="cv__column">
           <section class="cv__section cv__section--noheader intro">
             <h2 class="visually-hidden">Intro</h2>
-            <p class="intro__name">Anastasiia</p>
-            <p class="intro__surname">Shishova</p>
-            <p class="intro__profession">Frontend Developer</p>
+            <p class="intro__name">Name here</p>
+            <p class="intro__surname">Surname</p>
+            <p class="intro__profession">Graphic Designer</p>
           </section>
           <section class="cv__section cv__section--profile">
             <h2 class="title title--profile">Profile</h2>
@@ -23,32 +23,31 @@
               eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
               pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
               In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-              Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+              Nullam dictum felis eu <b>pede mollis pretium. Integer tincidunt.
               Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
               eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
               eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
               feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
-              Quisque rutrum. Aliquam lorem ante, dapibus in, viverra quis,
-              feugiat a, tellus.
+              Quisque rutrum.</b>
             </p>
           </section>
-          <section class="cv__section contact">
+          <section class="cv__section cv__section--contact">
             <h2 class="title title--contact">Contact</h2>
-            <div class="contact__table">
-              <div class="contact__column"></div>
-              <div class="contact__row">
-                <p class="contact__cell contact__type">Address</p>
-                <p class="contact__cell contact__value">Main Street, City.</p>
+            <div class="deftable">
+              <div class="deftable__column"></div>
+              <div class="deftable__row">
+                <p class="deftable__cell deftable__definition">Address</p>
+                <p class="deftable__cell deftable__value">Main Street, City.</p>
               </div>
-              <div class="contact__row">
-                <p class="contact__cell contact__type">E-mail</p><a class="contact__cell contact__value link" href="mailto:contact@domain.com">contact@domain.com</a>
+              <div class="deftable__row">
+                <p class="deftable__cell deftable__definition">E-mail</p><a class="deftable__cell deftable__value deftable__value--linked" href="mailto:contact@domain.com">contact@domain.com</a>
               </div>
-              <div class="contact__row">
-                <p class="contact__cell contact__type">Phone</p>
-                <p class="contact__cell contact__value">555-555-555</p>
+              <div class="deftable__row">
+                <p class="deftable__cell deftable__definition">Phone</p>
+                <p class="deftable__cell deftable__value">555-555-555</p>
               </div>
-              <div class="contact__row">
-                <p class="contact__cell contact__type">Website</p><a class="contact__cell contact__value link" href="#">www.yourweb.com</a>
+              <div class="deftable__row">
+                <p class="deftable__cell deftable__definition">Website</p><a class="deftable__cell deftable__value deftable__value--linked" href="#">www.yourweb.com</a>
               </div>
             </div>
           </section>
@@ -58,11 +57,11 @@
               <ul class="range__list">
                 <li class="range__item">
                   <p class="range__name">Creative</p>
-                  <input class="range__scale range__scale--dotted" type="range" min="0" max="100" value="75">
+                  <input class="range__scale range__scale--dotted" type="range" min="0" max="100" value="75" disabled>
                 </li>
                 <li class="range__item">
                   <p class="range__name">Teamwork</p>
-                  <input class="range__scale range__scale--dotted" type="range" min="0" max="100" value="91" disabled>
+                  <input class="range__scale range__scale--dotted" type="range" min="0" max="100" value="92" disabled>
                 </li>
                 <li class="range__item">
                   <p class="range__name">Innovate</p>
@@ -70,16 +69,16 @@
                 </li>
                 <li class="range__item">
                   <p class="range__name">Communication</p>
-                  <input class="range__scale range__scale--dotted" type="range" min="0" max="100" value="91" disabled>
+                  <input class="range__scale range__scale--dotted" type="range" min="0" max="100" value="92" disabled>
                 </li>
               </ul>
             </div>
           </section>
         </div>
         <div class="cv__column">
-          <section class="cv__section education">
+          <section class="cv__section cv__section--education">
             <h2 class="title title--education">Education</h2>
-            <ul class="list education__list">
+            <ul class="list">
               <li class="list__item">
                 <div class="list__header">
                   <p class="list__header-title list__header-title--blue">Master Degree</p>
@@ -142,9 +141,9 @@
               </li>
             </ul>
           </section>
-          <section class="cv__section experience">
+          <section class="cv__section cv__section--experience">
             <h2 class="title title--experience">Experience</h2>
-            <ul class="list experience__list">
+            <ul class="list list--experience">
               <li class="list__item">
                 <div class="list__header">
                   <p class="list__header-title">Company Name</p>

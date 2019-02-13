@@ -12,8 +12,6 @@ $skills-bg-h: 52px;
 
 $icon-w: 78px;
 
-$scale: 0.8;
-
 @mixin calc-bg-size($width, $height, $scale: 1) {
   background-size:
     calc(#{$width} * #{$scale}),
@@ -35,7 +33,7 @@ $scale: 0.8;
   color: $color-blue;
   background-color: $color-white;
 
-  @include calc-padding($scale);
+  @include calc-padding($scale-tablet);
 
   &::before {
     position: absolute;
@@ -51,31 +49,31 @@ $scale: 0.8;
       0 0 0 4px $color-white,
       0 0 0 5px $color-blue;
 
-    @include calc-size($icon-w, $scale);
+    @include calc-size($icon-w, $scale-tablet);
   }
 
   &--profile::before {
     background-image: url("../img/profile-icon.svg");
 
-    @include calc-bg-size($profile-bg-w, $profile-bg-h, $scale);
+    @include calc-bg-size($profile-bg-w, $profile-bg-h, $scale-tablet);
   }
 
   &--skills::before {
     background-image: url("../img/skills-icon.svg");
 
-    @include calc-bg-size($skills-bg-w, $skills-bg-h, $scale);
+    @include calc-bg-size($skills-bg-w, $skills-bg-h, $scale-tablet);
   }
 
   &--experience::before {
     background-image: url("../img/experience-icon.svg");
 
-    @include calc-bg-size($education-bg-w, $education-bg-h, $scale);
+    @include calc-bg-size($education-bg-w, $education-bg-h, $scale-tablet);
   }
 
   &--education::before {
     background-image: url("../img/education-icon.svg");
 
-    @include calc-bg-size($experience-bg-w, $experience-bg-h, $scale);
+    @include calc-bg-size($experience-bg-w, $experience-bg-h, $scale-tablet);
   }
 
   @media (min-width: $width-desktop) {

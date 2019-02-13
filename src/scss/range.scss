@@ -1,10 +1,12 @@
+$font-size: 31px;
+
 .range__list {
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 16px 0 0 0;
 
   &--two-columns {
     flex-direction: row;
@@ -31,9 +33,18 @@
 }
 
 .range__name {
-  font-size: 31px;
   text-transform: uppercase;
   margin: 25px 0 4px 0;
+
+  @include calc-font($font-size, $scale-mobile);
+
+  @media (min-width: $width-tablet) {
+    @include calc-font($font-size, $scale-tablet);
+  }
+
+  @media (min-width: $width-desktop) {
+    @include calc-font($font-size);
+  }
 }
 
 .range__scale {
@@ -42,27 +53,30 @@
   appearance: none;
   overflow: hidden;
   cursor: pointer;
-  width: 100%;
-  height: 27px;
-  margin-top: 12px;
-  margin-bottom: 2px;
+  width: 95%;
+  height: 23px;
+  margin-top: 16px;
+  margin-bottom: 10px;
 
   &--dotted {
-    height: 24px;
+    margin-top: 10px;
+    margin-bottom: 4px;
   }
 
   &--dotted::before {
     position: absolute;
-    height: 30px;
+    top: 0;
+    height: 23px;
     width: 100%;
     content: "";
-    background-image: url("../img/dot-pattern.svg");
-    background-size: 33px 40px;
-    background-position: -5px -8px;
+    background-image:
+      radial-gradient(circle at 50% 40%, transparent, transparent 30%, white 30%);
+    background-size: 8.43% 23px;
+    background-position: -0.6% 50%;
     background-repeat: repeat-x;
   }
 
-  &::-webkit-slider-thumb {
+  &::range-thumb {
     appearance: none;
     border: none;
     width: 0;
@@ -70,7 +84,23 @@
     box-shadow: -100vw 0 0 100vw $color-blue;
   }
 
-  &::-webkit-slider-runnable-track {
+  &::range-track {
     background: $color-gray;
+  }
+
+  @media (min-width: $width-tablet-large) {
+    &--dotted::before {
+      background-image:
+        radial-gradient(circle at 50% 40%, transparent, transparent 47%, white 47%);
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    height: 27px;
+
+    &--dotted::before {
+      height: 27px;
+      background-size: 8.43% 27px;
+    }
   }
 }

@@ -53,6 +53,7 @@ const config = {
                     }
                   ]
                 }),
+                require("postcss-input-range")(),
                 require("autoprefixer") ({
                   browsers:['ie >= 11', 'last 4 version']
                 })
