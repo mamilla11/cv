@@ -1,0 +1,42 @@
+$scale: 0.8;
+$font-size: 25px;
+
+.deftable {
+  display: table;
+  width: 100%;
+
+  @include calc-font($font-size, $scale);
+
+  @media (min-width: $width-desktop) {
+    @include calc-font($font-size);
+  }
+}
+
+.deftable__column {
+  display: table-column;
+  width: 40%;
+
+  @media (min-width: $width-tablet) {
+    width: 20%;
+  }
+
+  @media (min-width: $width-tablet-large) {
+    width: 31%;
+  }
+}
+
+.deftable__row {
+  display: table-row;
+}
+
+.deftable__cell {
+  display: table-cell;
+  padding-top: 41.7px;
+  vertical-align: middle;
+}
+
+.deftable__definition {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color-blue;
+}
