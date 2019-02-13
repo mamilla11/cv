@@ -1,49 +1,99 @@
+$education-bg-w: 60px;
+$education-bg-h: 55px;
+
+$profile-bg-w: 40px;
+$profile-bg-h: 35px;
+
+$experience-bg-w: 57px;
+$experience-bg-h: 52px;
+
+$skills-bg-w: 57px;
+$skills-bg-h: 52px;
+
+$scale: 0.8;
+
+@mixin calc-bg-size($width, $height, $scale: 1) {
+  background-size:
+    calc(#{$width} * #{$scale}),
+    calc(#{$height} * #{$scale});
+}
+
+@mixin calc-icon-size($scale: 1) {
+  $size: calc(78px * #{$scale});
+  width: $size;
+  height: $size;
+}
+
+@mixin calc-padding($scale: 1) {
+  padding: 0 calc(10px * #{$scale}) 0 calc(102px * #{$scale});
+}
+
 .title {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  font-size: 30px;
   text-transform: uppercase;
+  font-size: 30px;
+  line-height: 38px;
+  margin: -22px 0 12px 0;
   color: $color-blue;
-  padding: 0 10px 0 62px;
-  margin: -38px 0 12px 0;
   background-color: $color-white;
+
+  @include calc-padding($scale);
 
   &::before {
     position: absolute;
     top: 50%;
     left: 7px;
     transform: translateY(-50%);
-    width: 54px;
-    height: 52px;
     content: "";
     border-radius: 50%;
     background-color: $color-blue;
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow:
+      0 0 0 4px $color-white,
+      0 0 0 5px $color-blue;
+
+    @include calc-icon-size($scale);
   }
 
   &--profile::before {
     background-image: url("../img/profile-icon.svg");
+
+    @include calc-bg-size($profile-bg-w, $profile-bg-h, $scale);
   }
 
   &--skills::before {
     background-image: url("../img/skills-icon.svg");
+
+    @include calc-bg-size($skills-bg-w, $skills-bg-h, $scale);
   }
 
   &--experience::before {
     background-image: url("../img/experience-icon.svg");
+
+    @include calc-bg-size($education-bg-w, $education-bg-h, $scale);
   }
 
   &--education::before {
     background-image: url("../img/education-icon.svg");
+
+    @include calc-bg-size($experience-bg-w, $experience-bg-h, $scale);
   }
 
-  @media (min-width: $width-tablet) {
+  @media (min-width: $width-desktop) {
     font-size: 49px;
-    padding: 0 10px 0 102px;
+    line-height: 57px;
+    margin: -34px 0 12px 0;
 
-    &--education,
+    @include calc-padding();
+
+    &--education {
+      padding-left: 112px;
+      padding-right: 12px;
+    }
+
     &--experience,
     &--software {
       padding-left: 112px;
@@ -51,25 +101,25 @@
     }
 
     &::before {
-      width: 79.2px;
-      height: 78px;
-
-      box-shadow:
-        0 0 0 4px $color-white,
-        0 0 0 5px $color-blue;
+      @include calc-icon-size();
     }
 
     &--profile::before {
-      background-size: 40px 35px;
+      @include calc-bg-size($profile-bg-w, $profile-bg-h);
     }
 
-    &--skills::before,
-    &--experience::before {
-      background-size: 57px 52px;
+    &--skills::before {
+      @include calc-bg-size($skills-bg-w, $skills-bg-h);
     }
 
     &--education::before {
-      background-size: 60px 55px;
+      top: 35px;
+
+      @include calc-bg-size($education-bg-w, $education-bg-h);
+    }
+
+    &--experience::before {
+      @include calc-bg-size($experience-bg-w, $experience-bg-h);
     }
   }
 }

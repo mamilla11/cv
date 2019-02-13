@@ -2,7 +2,13 @@
   margin: 0;
   padding: 0;
   font-family: "Myriad Pro", "Arial", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $width-desktop) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .cv__container {
@@ -15,10 +21,10 @@
     padding: 80px 30px 52px 30px;
   }
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $width-tablet-large) {
     display: flex;
     justify-content: space-between;
-    max-width: $width-desktop;
+    max-width: $max-width;
     padding: 95px 40px 62px 40px;
   }
 }
@@ -26,7 +32,7 @@
 .cv__column {
   flex-shrink: 0;
 
-  @media (min-width: $width-desktop) {
+  @media (min-width: $width-tablet-large) {
     &:first-child {
       width: 37%;
     }
@@ -40,9 +46,31 @@
 .cv__section {
   margin: 0 0 92px 0;
   padding: 0;
-  border-top: 5px solid $color-blue;
+  border-top: 4px solid $color-blue;
 
-  &--noheader {
+  &:first-child {
     border-top: none;
+  }
+
+  &--profile {
+    text-align: justify;
+  }
+
+  &--education {
+    margin-top: 3px;
+    margin-bottom: 100px;
+  }
+
+  &--experience {
+    margin-bottom: 102px;
+  }
+
+  @media (min-width: $width-desktop) {
+    border-top: 6px solid $color-blue;
+
+    &--profile {
+      text-align: left;
+      padding-right: 17px;
+    }
   }
 }
