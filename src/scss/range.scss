@@ -69,13 +69,13 @@ $font-size: 31px;
     height: 23px;
     width: 100%;
     content: "";
-    background-image:
-      radial-gradient(circle at 50% 40%, transparent, transparent 30%, white 30%);
+    background-image: radial-gradient(circle at 50% 40%, transparent, transparent 30%, white 30%);
     background-size: 8.43% 23px;
     background-position: -0.6% 50%;
     background-repeat: repeat-x;
   }
 
+  /* stylelint-disable */
   &::range-thumb {
     appearance: none;
     border: none;
@@ -87,11 +87,11 @@ $font-size: 31px;
   &::range-track {
     background: $color-gray;
   }
+  /* stylelint-enable */
 
   @media (min-width: $width-tablet-large) {
     &--dotted::before {
-      background-image:
-        radial-gradient(circle at 50% 40%, transparent, transparent 47%, white 47%);
+      background-image: radial-gradient(circle at 50% 40%, transparent, transparent 47%, white 47%);
     }
   }
 

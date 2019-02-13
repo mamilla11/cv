@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "puglint": "pug-lint \"./src/html\"",
-    "editorconfig": "editorconfig-cli \"./src\"",
+    "editorconfig": "editorconfig-cli \"./src/**/*.{scss,pug,js}\"",
     "stylelint": "stylelint \"src/scss/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && npm run puglint",
     "build": "webpack --mode production",
