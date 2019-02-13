@@ -10,18 +10,14 @@ $experience-bg-h: 52px;
 $skills-bg-w: 57px;
 $skills-bg-h: 52px;
 
+$icon-w: 78px;
+
 $scale: 0.8;
 
 @mixin calc-bg-size($width, $height, $scale: 1) {
   background-size:
     calc(#{$width} * #{$scale}),
     calc(#{$height} * #{$scale});
-}
-
-@mixin calc-icon-size($scale: 1) {
-  $size: calc(78px * #{$scale});
-  width: $size;
-  height: $size;
 }
 
 @mixin calc-padding($scale: 1) {
@@ -55,7 +51,7 @@ $scale: 0.8;
       0 0 0 4px $color-white,
       0 0 0 5px $color-blue;
 
-    @include calc-icon-size($scale);
+    @include calc-size($icon-w, $scale);
   }
 
   &--profile::before {
@@ -101,7 +97,7 @@ $scale: 0.8;
     }
 
     &::before {
-      @include calc-icon-size();
+      @include calc-size($icon-w);
     }
 
     &--profile::before {

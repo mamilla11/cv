@@ -48,7 +48,7 @@
   padding: 0;
   border-top: 4px solid $color-blue;
 
-  &:first-child {
+  &--noheader {
     border-top: none;
   }
 
@@ -58,15 +58,19 @@
 
   &--education {
     margin-top: 3px;
-    margin-bottom: 100px;
+    margin-bottom: 106px;
   }
 
   &--experience {
-    margin-bottom: 102px;
+    margin-bottom: 106px;
   }
 
   @media (min-width: $width-desktop) {
     border-top: 6px solid $color-blue;
+
+    &--noheader {
+      border-top: none;
+    }
 
     &--profile {
       text-align: left;

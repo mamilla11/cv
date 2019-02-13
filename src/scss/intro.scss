@@ -3,12 +3,6 @@ $name-size: 67px;
 $surname-size: 74px;
 $prof-size: 29px;
 
-@mixin calc-font($font-size, $scale: 1) {
-  $size: calc(#{$font-size} * #{$scale});
-  font-size: $size;
-  line-height: $size;
-}
-
 .intro {
   display: flex;
   position: relative;

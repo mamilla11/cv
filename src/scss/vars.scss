@@ -11,3 +11,15 @@ $color-blue: #3f6fb6;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-gray: #e6e6e6;
+
+@mixin calc-font($font-size, $scale: 1) {
+  $size: calc(#{$font-size} * #{$scale});
+  font-size: $size;
+  line-height: $size;
+}
+
+@mixin calc-size($width, $scale: 1) {
+  $size: calc(#{$width} * #{$scale});
+  width: $size;
+  height: $size;
+}

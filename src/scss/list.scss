@@ -1,34 +1,74 @@
+$scale-mobile: 0.6;
+$scale-tablet: 0.8;
+
+$header-size: 31px;
+$dot-w: 24px;
+
 .list {
   list-style: none;
   margin: 32px 0 0 0;
   padding: 0;
+
+  &--experience {
+    margin-top: 47px;
+  }
 }
 
 .list__item {
-  padding-left: 64px;
-  margin-bottom: 13.5px;
+  padding-left: 30px;
+
+  @media (min-width: $width-tablet) {
+    padding-left: 64px;
+  }
 }
 
 .list__header {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 0;
+
+  @include calc-font($header-size, $scale-mobile);
 
   &::before {
     position: absolute;
-    top: 50%;
-    left: -50px;
-    width: 23.4px;
-    height: 24.4px;
+    top: 10px;
+    left: -25px;
     content: "";
     background-color: $color-black;
     border-radius: 50%;
-    transform: translateY(-50%);
+
+    @include calc-size($dot-w, $scale-mobile);
+  }
+
+  @media (min-width: $width-tablet) {
+    flex-direction: row;
+    align-items: center;
+
+    @include calc-font($header-size, $scale-tablet);
+
+    &::before {
+      top: 15px;
+      left: -35px;
+
+      @include calc-size($dot-w, $scale-tablet);
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    @include calc-font($header-size);
+
+    &::before {
+      top: 12px;
+      left: -50px;
+
+      @include calc-size($dot-w);
+    }
   }
 }
 
 .list__header-title {
-  font-size: 31px;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0 16px 0 0;
@@ -39,16 +79,36 @@
 }
 
 .list__header-date {
-  font-size: 31px;
-  margin: 0;
+  margin: 16px 0 8px 0;
+  align-self: flex-end;
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+    align-self: auto;
+  }
 }
 
 .list__content-title {
-  font-size: 31px;
   text-transform: uppercase;
   margin: 0;
+  padding-bottom: 4px;
+
+  @include calc-font($header-size, $scale-mobile);
+
+  @media (min-width: $width-tablet) {
+    @include calc-font($header-size, $scale-tablet);
+  }
+
+  @media (min-width: $width-desktop) {
+    @include calc-font($header-size);
+  }
 }
 
 .list__content-text {
   margin: 8px 0;
+  text-align: justify;
+
+  @media (min-width: $width-desktop) {
+    text-align: left;
+  }
 }
