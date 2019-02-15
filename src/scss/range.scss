@@ -34,7 +34,7 @@ $font-size: 31px;
 
 .range__name {
   text-transform: uppercase;
-  margin: 25px 0 4px 0;
+  margin: 18px 0 4px 0;
 
   @include calc-font($font-size, $scale-mobile);
 
@@ -47,33 +47,58 @@ $font-size: 31px;
   }
 }
 
-.range__scale {
+.range__wrapper {
   position: relative;
-  margin: auto;
-  appearance: none;
-  overflow: hidden;
-  cursor: pointer;
-  width: 95%;
+  width: 100%;
   height: 23px;
-  margin-top: 16px;
+  margin-top: 14px;
   margin-bottom: 10px;
 
   &--dotted {
-    margin-top: 10px;
+    width: 95%;
+    margin-top: 8px;
     margin-bottom: 4px;
   }
 
   &--dotted::before {
     position: absolute;
-    top: 0;
     height: 23px;
     width: 100%;
     content: "";
-    background-image: radial-gradient(circle at 50% 40%, transparent, transparent 30%, white 30%);
+    background-image: radial-gradient(circle at 50% 50%, transparent, transparent 38%, white 38%);
     background-size: 8.43% 23px;
-    background-position: -0.6% 50%;
+    background-position: -0.8% 50%;
     background-repeat: repeat-x;
+    z-index: 1;
   }
+
+  @media (min-width: $width-tablet-large) {
+    &--dotted::before {
+      background-image: radial-gradient(circle at 50% 46%, transparent, transparent 50%, white 50%);
+    }
+  }
+
+  @media (min-width: $width-desktop) {
+    height: 27px;
+
+    &--dotted {
+      width: 100%;
+    }
+
+    &--dotted::before {
+      height: 27px;
+      background-size: 8.43% 27px;
+    }
+  }
+}
+
+.range__scale {
+  margin: auto;
+  appearance: none;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  height: 23px;
 
   /* stylelint-disable */
   &::range-thumb {
@@ -89,18 +114,13 @@ $font-size: 31px;
   }
   /* stylelint-enable */
 
-  @media (min-width: $width-tablet-large) {
-    &--dotted::before {
-      background-image: radial-gradient(circle at 50% 40%, transparent, transparent 47%, white 47%);
-    }
+  &::-ms-track { 
+    color: transparent;
+    height: 40px;
+    border: none;
   }
 
   @media (min-width: $width-desktop) {
     height: 27px;
-
-    &--dotted::before {
-      height: 27px;
-      background-size: 8.43% 27px;
-    }
   }
 }
